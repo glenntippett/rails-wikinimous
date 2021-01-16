@@ -1,0 +1,9 @@
+<h1>Edit Article</h1>
+
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Delete article", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
